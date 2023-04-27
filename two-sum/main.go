@@ -11,7 +11,7 @@ func twoSum(nums []int, target int) []int {
 			return []int{other, index}
 		}
 	}
-	return []int{}
+	return nil
 }
 
 func main() {
