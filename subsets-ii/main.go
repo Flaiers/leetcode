@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
-func subsets(nums []int) [][]int {
+func subsetsWithDup(nums []int) [][]int {
 	var answer [][]int
+	sort.Ints(nums)
 	helper(&answer, nums, nil, 0)
 	return answer
 }
@@ -18,5 +22,5 @@ func helper(answer *[][]int, nums, subset []int, idx int) {
 }
 
 func main() {
-	fmt.Println(subsets([]int{1, 2, 3}))
+	fmt.Println(subsetsWithDup([]int{1, 2, 3, 2}))
 }
