@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func targetSumExist(nums []int, target int) bool {
+func hasTargetSum(nums []int, target int) bool {
 	if len(nums) == 0 {
 		return false
 	}
@@ -20,5 +20,5 @@ func helper(nums []int, target, result, idx int) bool {
 }
 
 func main() {
-	fmt.Println(targetSumExist([]int{9, 3, 7}, 13))
+	fmt.Println(hasTargetSum([]int{9, 3, 7}, 13))
 }
